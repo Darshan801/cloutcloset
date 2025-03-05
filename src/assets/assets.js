@@ -1,3 +1,8 @@
+import search_icon from './search_icon.png'
+import profile_icon from './profile_icon.png'
+import cart_icon from './cart_icon.png'
+import menu_icon from './menu_icon.png'
+import dropdown_icon from './dropdown_icon.png'
 import bag from './bag.avif'
 import bag1 from './bag1.avif'
 import black1 from './black1.avif'
@@ -14,6 +19,11 @@ import model7 from './model7.avif'
 import model8 from './model8.avif'
 
 export const assets={
+    search_icon,
+    profile_icon,
+    cart_icon,
+    menu_icon,
+    dropdown_icon,
     bag,
     bag1,
     black1,
