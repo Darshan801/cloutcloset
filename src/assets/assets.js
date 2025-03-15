@@ -3,6 +3,7 @@ import profile_icon from './profile_icon.png'
 import cart_icon from './cart_icon.png'
 import menu_icon from './menu_icon.png'
 import dropdown_icon from './dropdown_icon.png'
+import dropdown_icon1 from './dropdown_icon1.png'
 import hero from './hero.avif'
 import exchange_icon from './exchange_icon.png'
 import support_icon from './support_icon.png'
@@ -29,6 +30,7 @@ export const assets={
     cart_icon,
     menu_icon,
     dropdown_icon,
+    dropdown_icon1,
     hero,
     exchange_icon,
     quality_icon,
