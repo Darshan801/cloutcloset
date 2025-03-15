@@ -61,7 +61,7 @@ export const products=[
           "image": [
             model1
           ],
-          "category": "Clothing",
+          "category": "Men",
           "subcategory": "T-Shirts",
           "sizes": ["S", "M", "L", "XL"],
           "data": "2025-03-06",
@@ -75,7 +75,7 @@ export const products=[
           "image": [
             model2
           ],
-          "category": "Clothing",
+          "category": "Men",
           "subcategory": "Jeans",
           "sizes": ["28", "30", "32", "34", "36"],
           "data": "2025-02-20",
@@ -89,7 +89,7 @@ export const products=[
           "image": [
            model3
           ],
-          "category": "Clothing",
+          "category": "Women",
           "subcategory": "Jackets",
           "sizes": ["M", "L", "XL"],
           "data": "2025-01-15",
@@ -103,7 +103,7 @@ export const products=[
           "image": [
            model4
           ],
-          "category": "Clothing",
+          "category": "Men",
           "subcategory": "Hoodies",
           "sizes": ["S", "M", "L", "XL"],
           "data": "2025-03-01",
@@ -117,8 +117,8 @@ export const products=[
           "image": [
             model5
           ],
-          "category": "Clothing",
-          "subcategory": "Blazers",
+          "category": "Men",
+          "subcategory": "Shoes",
           "sizes": ["M", "L", "XL"],
           "data": "2025-03-04",
           "bestseller": true
@@ -131,22 +131,22 @@ export const products=[
           "image": [
            model6
           ],
-          "category": "Clothing",
-          "subcategory": "Skirts",
+          "category": "Women",
+          "subcategory": "T-shirts",
           "sizes": ["S", "M", "L"],
           "data": "2025-02-22",
           "bestseller": true
         },
         {
           "_id": "7",
-          "name": "Plaid Shirt",
+          "name": "Plaid Shirt",  
           "description": "A classic plaid shirt with a relaxed fit.",
           "price": 24.99,
           "image": [
            model7
           ],
-          "category": "Clothing",
-          "subcategory": "Shirts",
+          "category": "Men",
+          "subcategory": "Jeans",
           "sizes": ["S", "M", "L", "XL"],
           "data": "2025-01-18",
           "bestseller": true
@@ -159,8 +159,8 @@ export const products=[
           "image": [
             model8
           ],
-          "category": "Clothing",
-          "subcategory": "Jackets",
+          "category": "Kids",
+          "subcategory": "Jeans",
           "sizes": ["M", "L", "XL"],
           "data": "2025-03-02",
           "bestseller": false
@@ -173,8 +173,8 @@ export const products=[
           "image": [
            blue1
           ],
-          "category": "Clothing",
-          "subcategory": "Dresses",
+          "category": "Men",
+          "subcategory": "T-shirts",
           "sizes": ["S", "M", "L", "XL"],
           "data": "2025-02-18",
           "bestseller": true
@@ -187,8 +187,8 @@ export const products=[
           "image": [
            black1
           ],
-          "category": "Clothing",
-          "subcategory": "Pants",
+          "category": "Kids",
+          "subcategory": "Shoes",
           "sizes": ["30", "32", "34", "36", "38"],
           "data": "2025-01-30",
           "bestseller": false
@@ -201,8 +201,8 @@ export const products=[
           "image": [
            model1
           ],
-          "category": "Clothing",
-          "subcategory": "Shirts",
+          "category": "Men",
+          "subcategory": "Shoes",
           "sizes": ["S", "M", "L", "XL"],
           "data": "2025-02-25",
           "bestseller": true
@@ -215,8 +215,8 @@ export const products=[
           "image": [
            model2
           ],
-          "category": "Clothing",
-          "subcategory": "Coats",
+          "category": "Women",
+          "subcategory": "Jeans",
           "sizes": ["M", "L", "XL"],
           "data": "2025-03-01",
           "bestseller": false
@@ -243,8 +243,8 @@ export const products=[
           "image": [
            model4
           ],
-          "category": "Clothing",
-          "subcategory": "Shorts",
+          "category": "Men",
+          "subcategory": "Jackets",
           "sizes": ["S", "M", "L"],
           "data": "2025-03-05",
           "bestseller": true
@@ -257,7 +257,7 @@ export const products=[
           "image": [
            model5
           ],
-          "category": "Clothing",
+          "category": "Women",
           "subcategory": "Sweaters",
           "sizes": ["S", "M", "L", "XL"],
           "data": "2025-03-03",
@@ -271,8 +271,8 @@ export const products=[
           "image": [
            model6
           ],
-          "category": "Clothing",
-          "subcategory": "Skirts",
+          "category": "Kids",
+          "subcategory": "T-shirts",
           "sizes": ["S", "M", "L"],
           "data": "2025-03-06",
           "bestseller": false
@@ -285,8 +285,8 @@ export const products=[
           "image": [
            model7
           ],
-          "category": "Clothing",
-          "subcategory": "Dresses",
+          "category": "Women",
+          "subcategory": "Jeans",
           "sizes": ["S", "M", "L"],
           "data": "2025-02-10",
           "bestseller": true

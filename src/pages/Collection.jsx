@@ -9,9 +9,11 @@ const Collection = () => {
   const [showfilter,setshowfilter]=useState(false);
   const[FilterProducts,setFilterProducts]=useState([]);
   const [category,setCategory]=useState([]);
-  const [subcategary,setSubCategory]=useState([]);
+  const [subcategory,setSubCategory]=useState([]);
 
-  const toggleCategary=(e)=>{
+
+  //for categary
+  const toggleCategory=(e)=>{
     if (category.includes(e.target.value)) {
       setCategory(prev=>prev.filter(item=>item !== e.target.value))
     }
@@ -20,22 +22,40 @@ const Collection = () => {
     }
   }
 
-  const toggleSubCategary=(e)=>{
-    if (subcategary.includes(e.target.value)) {
+  //for type or subcatogary
+
+  const toggleSubCategory=(e)=>{
+    if (subcategory.includes(e.target.value)) {
       setSubCategory(prev=>prev.filter(item=>item !== e.target.value))
     }
     else{
       setSubCategory(prev => [...prev,e.target.value])
     }
   }
+  
+  const applyFilter=()=>{
+    let productCopy=products.slice();
+    if (category.length>0) {
+      productCopy=productCopy.filter(item=>category.includes(item.category));
+    }
+    if(subcategory.length>0){
+      productCopy=productCopy.filter(item=>subcategory.includes(item.subcategory));
+    }
+    setFilterProducts(productCopy)
+  }
 
-  useEffect(()=>{
-      console.log(subcategary);
-  },[subcategary])
+  // useEffect(()=>{
+  //     console.log(category);
+  // },[category])
 
   useEffect(()=>{
     setFilterProducts(products);
   },[])
+
+  useEffect(()=>{
+    applyFilter();
+  },[category,subcategory])
+
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
 
@@ -49,13 +69,13 @@ const Collection = () => {
             <p className='mb-3 text-sm font-medium'>CATEGORIES</p>
               <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
                 <p className='flex gap-2'>
-                    <input type="checkbox" onChange={toggleCategary} name="" id="" value={'Men'} className='w-3'/>Men
+                    <input type="checkbox" onChange={toggleCategory} name="" id="" value={'Men'} className='w-3'/>Men
                 </p>
                 <p className='flex gap-2'>
-                    <input type="checkbox" onChange={toggleCategary} name="" id="" value={'Women'} className='w-3'/>Women
+                    <input type="checkbox" onChange={toggleCategory} name="" id="" value={'Women'} className='w-3'/>Women
                 </p>
                 <p className='flex gap-2'>
-                    <input type="checkbox" onChange={toggleCategary} name="" id="" value={'kids'} className='w-3'/>kids
+                    <input type="checkbox" onChange={toggleCategory} name="" id="" value={'Kids'} className='w-3'/>Kids
                 </p>
 
               </div>
@@ -66,13 +86,19 @@ const Collection = () => {
             <p className='mb-3 text-sm font-medium'>TYPE</p>
               <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
                 <p className='flex gap-2'>
-                    <input type="checkbox" onChange={toggleSubCategary} name="" id="" value={'Topwear'} className='w-3'/>Topwear
+                    <input type="checkbox" onChange={toggleSubCategory} name="" id="" value={'T-shirts'} className='w-3'/>T-shirts
                 </p>
                 <p className='flex gap-2'>
-                    <input type="checkbox" onChange={toggleSubCategary} name="" id="" value={'Bottomwear'} className='w-3'/>Bottomwear
+                    <input type="checkbox" onChange={toggleSubCategory} name="" id="" value={'Jeans'} className='w-3'/>Jeans
                 </p>
                 <p className='flex gap-2'>
-                    <input type="checkbox" onChange={toggleSubCategary} name="" id="" value={'Winterwear'} className='w-3'/>Winterwear
+                    <input type="checkbox" onChange={toggleSubCategory} name="" id="" value={'Shoes'} className='w-3'/>Shoes
+                </p>
+                <p className='flex gap-2'>
+                    <input type="checkbox" onChange={toggleSubCategory} name="" id="" value={'Jackets'} className='w-3'/>Jackets
+                </p>
+                <p className='flex gap-2'>
+                    <input type="checkbox" onChange={toggleSubCategory} name="" id="" value={'Sweaters'} className='w-3'/>Sweaters
                 </p>
 
               </div>
