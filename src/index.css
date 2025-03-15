@@ -15,6 +15,13 @@
   margin-inline: auto;
 }
 
+.my-20 {
+    margin-block: calc(var(--spacing) * 20) /* 2.5rem = 40px */;
+}
+.mt-20 {
+  margin-top: calc(var(--spacing) * 20) /* 5rem = 80px */;
+}
+
 a.active hr{
   display: block;
 }
