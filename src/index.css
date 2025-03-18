@@ -6,7 +6,9 @@
   margin: 0;
   font-family: Outfit;
 }
-
+.mt-5 {
+  margin-top: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
+}
 .m-auto {
   margin: auto;
 }
