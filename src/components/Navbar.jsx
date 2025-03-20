@@ -4,10 +4,13 @@ import { Link, NavLink } from 'react-router'
 import { ShopContext } from '../context/ShopContext'
 const Navbar = () => {
     const[visible,setvisible]=useState(false)
-    const{ setShowSearch }=useContext(ShopContext);
+    const{ setShowSearch , getCartCount}=useContext(ShopContext);
+
 
   return (
+
     <div className='flex items-center justify-between py-5 font-medium'>
+
         {/* <img src={assets.dum3} className='w-36' alt="" /> */}
         <Link to='/'><h1 className='w-36 text-2xl'>Clout Closet</h1></Link>
         <ul className='hidden sm:flex gap-5 text-gray-700'>
@@ -29,6 +32,7 @@ const Navbar = () => {
             </NavLink>
         </ul>
 
+
         <div className='flex items-center gap-6'>
             <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer' alt="" />
 
@@ -45,12 +49,13 @@ const Navbar = () => {
             </div>
             <Link to='/cart' className='relative'>
                 <img src={assets.cart_icon} className='w-5 min-w-5' alt="" />
-                <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>10</p>
+                <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>{getCartCount()}</p>
              </Link>
              <img onClick={()=>setvisible(true)} src={assets.menu_icon} className='w-5 cursor-pointer sm:hidden' alt="" />
         </div>
 
-{/* side bar for small devices */}
+
+{/*------------- side bar for small devices--------------- */}
 
         <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible?'w-full' : 'w-0'}`}>
             <div className='flex flex-col text-gray-600'>
