@@ -52,6 +52,13 @@ import { toast } from "react-toastify";
         return totalCount;
     }
 
+    const updateQuantity=async(itemId,size,quantity)=>{
+            let cartData=structuredClone(cartItems);
+            cartData[itemId][size]=quantity;
+
+            setCartItems(cartData);
+    }
+
     // useEffect(()=>{
     //     console.log(cartItems)
     // },[cartItems])
@@ -62,7 +69,7 @@ import { toast } from "react-toastify";
         products, currency, delivery_fee,
         search,setSearch,showSearch,setShowSearch,
         cartItems,setCartItems,addToCart,
-        getCartCount
+        getCartCount,updateQuantity
     }
 
     return(

@@ -9,6 +9,7 @@ import exchange_icon from './exchange_icon.png'
 import support_icon from './support_icon.png'
 import quality_icon from './quality_icon.png'
 import cross_icon from './cross_icon.png'
+import bin_icon from './bin_icon.png'
 import bag from './bag.avif'
 import bag1 from './bag1.avif'
 import black1 from './black1.avif'
@@ -37,6 +38,7 @@ export const assets={
     quality_icon,
     support_icon,
     cross_icon,
+    bin_icon,
     bag,
     bag1,
     black1,
