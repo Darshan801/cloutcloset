@@ -52,7 +52,7 @@ export const assets={
     model5,
     model6,
     model7,
-    model8
+    model8,
 }
 
 
