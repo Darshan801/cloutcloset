@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Title from '../components/Title'
 import CartTotal from '../components/CartTotal'
 import { assets } from '../assets/assets'
+import { ShopContext } from '../context/ShopContext'
 
 const PlaceOrder = () => {
+
+  const{navigate}=useContext(ShopContext)
   return (
     <div className='flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 minlh-[80vh] border-t'>
       {/* --------------left side--------------- */}
@@ -44,6 +47,9 @@ const PlaceOrder = () => {
             </div>
 
           </div>
+        </div>
+        <div className='w-full txt-end mt-8'>
+          <button onClick={()=>navigate('/orders')} className='bg-black text-white px-16 py-3 text-sm'>PLACE ORDER</button>
         </div>
       </div>
       

@@ -26,8 +26,8 @@ const Navbar = () => {
                 <p>About</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
             </NavLink>
-            <NavLink to='/contract' className='flex flex-col items-center gap-1'>
-                <p>Contract</p>
+            <NavLink to='/contact' className='flex flex-col items-center gap-1'>
+                <p>Contact</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
             </NavLink>
         </ul>
@@ -37,7 +37,7 @@ const Navbar = () => {
             <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer' alt="" />
 
             <div className='group relative'>
-                <img src={assets.profile_icon}  className='w-5 cursor-pointer' alt="" />
+               <Link to={'/login'}><img src={assets.profile_icon}  className='w-5 cursor-pointer' alt="" /></Link> 
                 <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
                     <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
                         <p className='cursor-pointer hover:text-black'>My Profile</p>
