@@ -68,7 +68,7 @@ export const products=[
           "category": "Men",
           "subcategory": "T-Shirts",
           "sizes": ["S", "M", "L", "XL"],
-          "data": "2025-03-06",
+          "date": "2025-03-06",
           "bestseller": true
         },
         {
@@ -82,7 +82,7 @@ export const products=[
           "category": "Men",
           "subcategory": "Jeans",
           "sizes": ["28", "30", "32", "34", "36"],
-          "data": "2025-02-20",
+          "date": "2025-02-20",
           "bestseller": true
         },
         {
@@ -96,7 +96,7 @@ export const products=[
           "category": "Women",
           "subcategory": "Jackets",
           "sizes": ["M", "L", "XL"],
-          "data": "2025-01-15",
+          "date": "2025-01-15",
           "bestseller": false
         },
         {
@@ -110,7 +110,7 @@ export const products=[
           "category": "Men",
           "subcategory": "Hoodies",
           "sizes": ["S", "M", "L", "XL"],
-          "data": "2025-03-01",
+          "date": "2025-03-01",
           "bestseller": false
         },
         {
@@ -124,7 +124,7 @@ export const products=[
           "category": "Men",
           "subcategory": "Shoes",
           "sizes": ["M", "L", "XL"],
-          "data": "2025-03-04",
+          "date": "2025-03-04",
           "bestseller": true
         },
         {
@@ -138,7 +138,7 @@ export const products=[
           "category": "Women",
           "subcategory": "T-shirts",
           "sizes": ["S", "M", "L"],
-          "data": "2025-02-22",
+          "date": "2025-02-22",
           "bestseller": true
         },
         {
@@ -152,7 +152,7 @@ export const products=[
           "category": "Men",
           "subcategory": "Jeans",
           "sizes": ["S", "M", "L", "XL"],
-          "data": "2025-01-18",
+          "date": "2025-01-18",
           "bestseller": true
         },
         {
@@ -166,7 +166,7 @@ export const products=[
           "category": "Kids",
           "subcategory": "Jeans",
           "sizes": ["M", "L", "XL"],
-          "data": "2025-03-02",
+          "date": "2025-03-02",
           "bestseller": false
         },
         {
@@ -180,7 +180,7 @@ export const products=[
           "category": "Men",
           "subcategory": "T-shirts",
           "sizes": ["S", "M", "L", "XL"],
-          "data": "2025-02-18",
+          "date": "2025-02-18",
           "bestseller": true
         },
         {
@@ -194,7 +194,7 @@ export const products=[
           "category": "Kids",
           "subcategory": "Shoes",
           "sizes": ["30", "32", "34", "36", "38"],
-          "data": "2025-01-30",
+          "date": "2025-01-30",
           "bestseller": false
         },
         {
@@ -208,7 +208,7 @@ export const products=[
           "category": "Men",
           "subcategory": "Shoes",
           "sizes": ["S", "M", "L", "XL"],
-          "data": "2025-02-25",
+          "date": "2025-02-25",
           "bestseller": true
         },
         {
@@ -222,7 +222,7 @@ export const products=[
           "category": "Women",
           "subcategory": "Jeans",
           "sizes": ["M", "L", "XL"],
-          "data": "2025-03-01",
+          "date": "2025-03-01",
           "bestseller": false
         },
         {
@@ -236,7 +236,7 @@ export const products=[
           "category": "Clothing",
           "subcategory": "Jackets",
           "sizes": ["S", "M", "L", "XL"],
-          "data": "2025-02-15",
+          "date": "2025-02-15",
           "bestseller": false
         },
         {
@@ -250,7 +250,7 @@ export const products=[
           "category": "Men",
           "subcategory": "Jackets",
           "sizes": ["S", "M", "L"],
-          "data": "2025-03-05",
+          "date": "2025-03-05",
           "bestseller": true
         },
         {
@@ -264,7 +264,7 @@ export const products=[
           "category": "Women",
           "subcategory": "Sweaters",
           "sizes": ["S", "M", "L", "XL"],
-          "data": "2025-03-03",
+          "date": "2025-03-03",
           "bestseller": true
         },
         {
@@ -278,7 +278,7 @@ export const products=[
           "category": "Kids",
           "subcategory": "T-shirts",
           "sizes": ["S", "M", "L"],
-          "data": "2025-03-06",
+          "date": "2025-03-06",
           "bestseller": false
         },
         {
@@ -292,7 +292,7 @@ export const products=[
           "category": "Women",
           "subcategory": "Jeans",
           "sizes": ["S", "M", "L"],
-          "data": "2025-02-10",
+          "date": "2025-02-10",
           "bestseller": true
         }     
 ]
