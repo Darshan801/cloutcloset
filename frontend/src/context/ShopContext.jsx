@@ -6,11 +6,14 @@ import axios from 'axios'
 
  export const ShopContext = createContext();
  const ShopContextProvider=(props)=>{
-    const currency='Rs';
+    const currency='rs';
     const delivery_fee=10;
+    const backendUrl=import.meta.env.VITE_BACKEND_URL
     const[search,setSearch]=useState('');
     const[showSearch,setShowSearch]=useState(false);
     const[cartItems,setCartItems]=useState({});
+    const[products,setProducts]=useState([])
+    const[token,setToken]=useState('')
     const navigate=useNavigate()
 
 
@@ -105,12 +108,58 @@ import axios from 'axios'
         return totalAmount;
     }
 
+    const getProductData= async() => {
+        try {
+            const response= await axios.get('http://localhost:4000/api/product/list')
+            // console.log(response.data)
+
+            if(response.data.success){
+                setProducts(response.data.products)
+            } else {
+                toast.error(response.data.message)
+            }
+
+        } catch (error) {
+            console.log(error)
+            toast.error(error.message)
+        }
+    }
+    
+//to prevent the cart reset when the page is reloaded 
+    const getUserCart = async (token)=> {
+        try {
+            const response = await axios.post('http://localhost:4000/api/cart/get',{},{headers:{token}})
+            if(response.data.success){
+                setCartItems(response.data.cartData)
+            }
+        } catch (error) {
+            console.log(error)
+            toast.error(error.message)
+        }
+    }
+
+    // to fetch the data 
+    useEffect(()=>{
+        getProductData()
+    },[])
+
+
+    useEffect(()=>{
+        if(!token && localStorage.getItem('token')){
+            setToken(localStorage.getItem('token'))
+            getUserCart(localStorage.getItem('token'))
+        }
+    },[])
+
+    
     const value={
         products, currency, delivery_fee,
         search,setSearch,showSearch,setShowSearch,
         cartItems,setCartItems,addToCart,
         getCartCount,updateQuantity,
-        getCartAmount,navigate
+        getCartAmount,navigate,
+        setToken,token
+        // ,backendUrl
     }
 
     return(
