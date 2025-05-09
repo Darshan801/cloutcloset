@@ -6,6 +6,10 @@
   margin: 0;
   font-family: Outfit;
 }
+
+.mt-1 {
+    margin-top: calc(var(--spacing) * 1) /* 0.25rem = 4px */;
+}
 .mt-3 {
   margin-top: calc(var(--spacing) * 3) /* 0.75rem = 12px */;
 }

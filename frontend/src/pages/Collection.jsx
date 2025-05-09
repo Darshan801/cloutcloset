@@ -63,18 +63,18 @@ const Collection = () => {
       
         default:
           applyFilter();
-          break;s
+          break;
       
     }
   }
 
-  useEffect(()=>{
-    setFilterProducts(products);
-  },[])
+  // useEffect(()=>{
+  //   setFilterProducts(products);
+  // },[])
 
   useEffect(()=>{
     applyFilter();
-  },[category,subcategory,search,showSearch])
+  },[category,subcategory,search,showSearch,products])
 
   useEffect(()=>{
     sortProduct();

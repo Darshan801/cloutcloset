@@ -5,13 +5,13 @@ import ProductItem from './ProductItem';
 
 const BestSeller = () => {
 
-    const { products, currency, delivery_fee } = useContext(ShopContext);
+    const {products} = useContext(ShopContext);
     const [bestSeller,setBestSeller]=useState([]);
 
     useEffect(() => {
         const bestProduct = products.filter((item) => item.bestseller);//accessing bestseller=true only from assects.js folder
         setBestSeller(bestProduct.slice(0,5));
-    }, []);
+    },[products]);
 
     return (
         <div className="my-10">
