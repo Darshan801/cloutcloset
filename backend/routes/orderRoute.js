@@ -1,5 +1,5 @@
 import express from 'express'
-import { allOrders, updateStatus, placeOrder, userOrders } from '../controllers/orderController.js'
+import { allOrders, updateStatus, placeOrder, userOrders , placeOrderStripe, verifyStripe } from '../controllers/orderController.js'
 import adminAuth from '../middleware/auth.js'
 import authUser from '../middleware/auth.js'
 
@@ -12,8 +12,12 @@ orderRouter.post('/status',adminAuth,updateStatus)
 
 //paymemt feature(token should be provided in header)
 orderRouter.post('/place',authUser,placeOrder)
+orderRouter.post('/stripe',authUser,placeOrderStripe)
 
 // user feature
 orderRouter.post('/userorders',authUser,userOrders)
+
+//verify payment
+orderRouter.post('/verifyStripe',authUser,verifyStripe)
 
 export default orderRouter

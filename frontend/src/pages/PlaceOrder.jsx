@@ -66,6 +66,18 @@ const PlaceOrder = () => {
           }
         break;
 
+        case 'stripe':
+          const responseStripe= await axios.post('http://localhost:4000/api/order/stripe',orderData,{headers:{token}})
+          if (responseStripe.data.success) {
+            const{session_url}=responseStripe.data
+            window.location.replace(session_url)
+          } else {
+            toast.error(responseStripe.data.message)
+          }
+
+
+        break;
+
         default:
           break;
       }
@@ -109,6 +121,13 @@ const PlaceOrder = () => {
             <div onClick={()=>setMethod('cod')} className='flex items-center gap-3 border p-2 cursor-pointer mt-3'>
               <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'cod' ? 'bg-green-400' : ''}`}></p>
               <p className='text-gray-500 text-sm font-medium mx-4'>CASH ON DELIVERY</p>
+  
+            </div>
+             <div onClick={()=>setMethod('stripe')} className='flex items-center gap-3 border p-2 cursor-pointer mt-3'>
+              <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'stripe' ? 'bg-green-400' : ''}`}></p>
+              <p className='text-gray-500 text-sm font-medium mx-4'>Stripe</p>
+              {/* <img className='h-5 mx-4' src={assets.stripe_logo} alt="" /> */}
+  
             </div>
           
             {/* <div className='flex items-center gap-3 border p-2 cursor-pointer'>

@@ -13,6 +13,7 @@ import Login from './pages/Login'
 import Footer from './components/Footer'
 import SearchBox from './components/SearchBox'
 import { ToastContainer, toast } from 'react-toastify';
+import Verify from './pages/Verify'
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/placeorder' element={<PlaceOrder />} />
         <Route path='/orders' element={<Order />} />
+        <Route path='/verify' element={<Verify />} />
       </Routes>
       <Footer/>
     </div>

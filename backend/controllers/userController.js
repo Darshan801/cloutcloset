@@ -18,6 +18,10 @@ const loginUser= async (req,res) =>{
         const user= await userModel.findOne({email});
 
         //check either exists or not
+
+        if(!email || !password){
+            return res.json({success:false , message:"Email"})
+        }
         if(!user){
             return res.json({success:false, message:"user not find"})
         }
@@ -58,6 +62,9 @@ const registerUser = async (req,res) =>{
         }
 
         // validating email and password using validator package
+        if(!name || !email || !password){
+            return res.json({success:false,message:"Details missing"})
+        }
 
         if(!validator.isEmail(email)){
             return res.json({success:false,message:"Invalid email"})
