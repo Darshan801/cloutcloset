@@ -1,5 +1,5 @@
 import mongoose, { mongo } from "mongoose";
-import { type } from "os";
+// import { type } from "os";
 
 const productSchema = new mongoose.Schema({
     name:{type:String, required:true },
@@ -9,7 +9,7 @@ const productSchema = new mongoose.Schema({
     category:{type:String, required:true },
     subcategory:{type:String, required:true },
     sizes:{type:Array, required:true },
-    bestSeller:{type:Boolean},
+    bestseller : {type: Boolean},
     date:{type:Number, required:true },
     
 })
