@@ -122,4 +122,41 @@ const adminLogin = async (req,res) => {
     }
 }
 
-export{ loginUser , registerUser , adminLogin }
+//route for getting user profile
+const getUserProfile = async (req, res) => {
+    try {
+        const userId = req.body.userId;
+        const user = await userModel.findById(userId).select('-password -cartData');
+        
+        if (!user) {
+            return res.json({ success: false, message: "User not found" });
+        }
+
+        res.json({ 
+            success: true, 
+            user: {
+                name: user.name,
+                email: user.email
+            }
+        });
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: error.message });
+    }
+}
+
+//route for getting all users (admin only)
+const getAllUsers = async (req, res) => {
+    try {
+        const users = await userModel.find().select('-password -cartData').sort({ createdAt: -1 });
+        res.json({ 
+            success: true, 
+            users 
+        });
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: error.message });
+    }
+}
+
+export{ loginUser , registerUser , adminLogin , getUserProfile , getAllUsers }

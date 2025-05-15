@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     password:{ type:String , required:true},
     cartData:{ type:Object, default:{}}, // mongo igonre data with empty object
     
-},{minimize:false})
+},{timestamps:true, minimize:false})
 
 const userModel = mongoose.models.user || mongoose.model('user',userSchema);
 export default userModel;
