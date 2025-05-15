@@ -77,8 +77,12 @@ const Product = () => {
           <p className='border px-5  py-3 text-sm'>Reviews(122)</p>
         </div>
         <div className='flex flex-col gap-4 border-1 px-6 py-6 text-sm text-gray-500'>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia voluptatibus recusandae illum magni amet impedit temporibus fugit esse consectetur.\</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, natus.</p>
+          <p>Elevate your wardrobe with this meticulously crafted piece that blends timeless
+             elegance with modern comfort. Designed for those who appreciate refined style and
+              effortless sophistication, this garment features premium-quality fabric that drapes 
+              beautifully, offering both breathability and durability. With attention to every detail—from 
+              the precise stitching to the flattering silhouette—it embodies grace and confidence in every stitch. Whether dressed up for an evening out or paired down for casual charm, this piece is a versatile essential that seamlessly complements your unique style.</p>
+          {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, natus.</p> */}
         </div>
 
       </div>

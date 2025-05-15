@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Add from './pages/Add'
 import List from './pages/List'
 import Orders from './pages/Orders'
+import Users from './pages/Users'
 import Login from './components/Login'
 import { ToastContainer} from 'react-toastify';
 
@@ -15,12 +16,15 @@ export const currency='Rs'
 const App = () => {
 
   const [token,setToken]=useState(localStorage.getItem('token')?localStorage.getItem('token'):'');
+  const navigate = useNavigate()
 
   useEffect(()=>{
     localStorage.setItem('token',token)
   },[token])
 
-
+  if (!token) {
+    navigate('/admin')
+  }
 
   return (
     <div className='bg-gray-50 min-h-screen'>
@@ -37,6 +41,7 @@ const App = () => {
               <Route path='/add' element={<Add token={token}/>}/>
               <Route path='/list' element={<List token={token}/>}/>
               <Route path='/orders' element={<Orders token={token}/>}/>
+              <Route path='/users' element={<Users />} />
             </Routes>
         </div>
       </div>
