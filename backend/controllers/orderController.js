@@ -4,8 +4,8 @@ import Stripe from 'stripe'
 
 
 // global variables
-const currency = 'npr'
-const deliveryCharge = 10 
+const currency = 'NPR'
+const deliveryCharge = 150
 
 
 //GETWAY initalize

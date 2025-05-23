@@ -24,7 +24,7 @@ import model5 from './model5.avif'
 import model6 from './model6.avif'
 import model7 from './model7.avif'
 import model8 from './model8.avif'
-
+import tyler from './tyler.jpg'
 
 export const assets={
     search_icon,
@@ -35,6 +35,7 @@ export const assets={
     dropdown_icon1,
     hero,
     exchange_icon,
+    tyler,
     quality_icon,
     support_icon,
     cross_icon,

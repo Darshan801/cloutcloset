@@ -8,7 +8,7 @@ const Footer = () => {
             <div>
                 {/* <img src={assets.logo} className='mb-5 w-32' alt="" /> */}
                 <h1 className='mb-5 w-32 text-xl font-semibold'>CloutCloset</h1>
-                <p className='w-full md:w-2/3 text-gray-600'>Lorem ipsum, dolor  sit amet consectetur adipisicing elit. Officiis delectus doloribus quibusdam labore dignissimos. Fuga.</p>
+                <p className='w-full md:w-2/3 text-gray-600'>We’re not just a brand. We’re a movement. Welcome to the Closet — where style meets influence.</p>
             </div>
 
         <div>
